@@ -1,3 +1,4 @@
+```md
 # Docs Agent Sandbox
 
 This repository exists to test an automated documentation agent.
@@ -20,3 +21,10 @@ This project simulates a small backend service with a REST API and basic configu
 ```bash
 git clone https://github.com/YOUR_USERNAME/docs-agent-sandbox.git
 cd docs-agent-sandbox
+```
+
+## Monthly Updates (2024-02)
+
+- Added initial project setup
+- Implemented basic authentication
+```
