@@ -21,14 +21,6 @@ This project simulates a small backend service with a REST API and basic configu
 ```bash
 git clone https://github.com/YOUR_USERNAME/docs-agent-sandbox.git
 cd docs-agent-sandbox
-```
-
-- Added initial project setup
-- Implemented basic authentication
-
-- Fixed typo in README
-- Improved README formatting for clarity and consistency
-```
 
 ## Monthly Updates (2026-02)
 
