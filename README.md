@@ -23,8 +23,6 @@ git clone https://github.com/YOUR_USERNAME/docs-agent-sandbox.git
 cd docs-agent-sandbox
 ```
 
-## Monthly Updates (2024-02)
-
 - Added initial project setup
 - Implemented basic authentication
 
