@@ -15,6 +15,7 @@ This project simulates a small backend service with a REST API and basic configu
 - Configurable environment variables
 - Logging
 - Authentication (basic)
+- Test push for CI
 
 ## Installation
 
