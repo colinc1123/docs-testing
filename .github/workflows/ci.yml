@@ -24,3 +24,20 @@ jobs:
 
       - name: Run tests
         run: npm test
+      - name: Notify n8n (success)
+        if: success()
+        run: |
+          curl -sS -X POST "$N8N_WEBHOOK_URL" \
+            -H "Content-Type: application/json" \
+            -d "{\"status\":\"success\",\"repo\":\"${{ github.repository }}\",\"branch\":\"${{ github.ref_name }}\",\"sha\":\"${{ github.sha }}\",\"runUrl\":\"https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}\"}"
+        env:
+          N8N_WEBHOOK_URL: ${{ secrets.N8N_WEBHOOK_URL }}
+
+      - name: Notify n8n (failure)
+        if: failure()
+        run: |
+          curl -sS -X POST "$N8N_WEBHOOK_URL" \
+            -H "Content-Type: application/json" \
+            -d "{\"status\":\"failure\",\"repo\":\"${{ github.repository }}\",\"branch\":\"${{ github.ref_name }}\",\"sha\":\"${{ github.sha }}\",\"runUrl\":\"https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}\"}"
+        env:
+          N8N_WEBHOOK_URL: ${{ secrets.N8N_WEBHOOK_URL }}
